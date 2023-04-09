@@ -1,0 +1,13 @@
+package br.ucsal.dto;
+
+import jakarta.validation.constraints.NotBlank;
+
+public class UserDTO {
+
+	@NotBlank
+	private String login;
+	@NotBlank
+	private String password;
+	@NotBlank
+	private Boolean teacher;
+}

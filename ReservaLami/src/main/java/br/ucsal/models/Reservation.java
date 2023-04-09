@@ -1,15 +1,13 @@
 package br.ucsal.models;
 
-import java.util.Date;
-
-import org.springframework.data.annotation.Id;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -25,11 +23,11 @@ public class Reservation {
 	@ManyToOne
 	@JoinColumn(name = "teacher_id")
 	private Teacher teacher;
-	@OneToMany
+	@ManyToOne
 	@JoinColumn(name = "discipline_id")
 	private Discipline discipline;
-	private Date startTime;
-	private Date endTime;
+	private LocalDateTime startTime;
+	private LocalDateTime endTime;
 	private StatusReservation statusReservation;
 	
 	
@@ -57,16 +55,16 @@ public class Reservation {
 	public void setDiscipline(Discipline discipline) {
 		this.discipline = discipline;
 	}
-	public Date getStartTime() {
+	public LocalDateTime getStartTime() {
 		return startTime;
 	}
-	public void setStartTime(Date startTime) {
+	public void setStartTime(LocalDateTime startTime) {
 		this.startTime = startTime;
 	}
-	public Date getEndTime() {
+	public LocalDateTime getEndTime() {
 		return endTime;
 	}
-	public void setEndTime(Date endTime) {
+	public void setEndTime(LocalDateTime endTime) {
 		this.endTime = endTime;
 	}
 	public StatusReservation getStatusReservation() {

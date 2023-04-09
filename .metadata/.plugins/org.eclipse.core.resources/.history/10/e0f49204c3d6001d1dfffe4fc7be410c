@@ -1,0 +1,23 @@
+package br.ucsal.dto;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import br.ucsal.models.Teacher;
+import br.ucsal.repositories.TeacherRepository;
+import jakarta.validation.constraints.NotBlank;
+
+public class TeacherDTO {
+	
+	@Autowired
+	private TeacherRepository repository;
+	
+	@NotBlank
+	private String nameTeacher;
+	@NotBlank
+	private String emailTeacher;
+
+	public Object save(Teacher professor) {
+		return repository.save(professor);
+	}
+
+}

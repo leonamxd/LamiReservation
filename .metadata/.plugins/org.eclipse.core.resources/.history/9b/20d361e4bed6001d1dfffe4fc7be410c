@@ -1,0 +1,11 @@
+package br.ucsal.services;
+
+import org.springframework.stereotype.Service;
+
+import br.ucsal.repositories.TeacherRepository;
+
+@Service
+public class TeacherService {
+
+	private TeacherRepository repository;
+}

@@ -1,0 +1,17 @@
+package br.ucsal.dto;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import br.ucsal.models.Discipline;
+import br.ucsal.repositories.DisciplineRepository;
+
+public class DisciplineDTO {
+	
+	@Autowired
+	private DisciplineRepository repository;
+
+	public Object save(Discipline disciplina) {
+		return repository.save(disciplina);
+	}
+
+}
