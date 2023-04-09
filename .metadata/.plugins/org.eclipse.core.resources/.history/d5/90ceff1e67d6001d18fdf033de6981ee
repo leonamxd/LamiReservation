@@ -1,0 +1,10 @@
+package br.ucsal.model;
+
+public class User {
+
+	private Long userId;
+	private String login;
+	private String password;
+	private Profile profile;
+	private Boolean teacher;
+}

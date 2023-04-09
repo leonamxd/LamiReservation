@@ -1,0 +1,15 @@
+package br.ucsal.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
+public class User {
+
+	private Long userId;
+	private String login;
+	private String password;
+	private Profile profile;
+	private Boolean teacher;
+}

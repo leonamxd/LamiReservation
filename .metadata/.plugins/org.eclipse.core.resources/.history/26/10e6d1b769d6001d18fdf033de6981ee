@@ -1,0 +1,13 @@
+package br.ucsal.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tb_discipline")
+public class Discipline {
+
+	private Long disciplineId;
+	private String nameDiscipline;
+	private String description;
+}

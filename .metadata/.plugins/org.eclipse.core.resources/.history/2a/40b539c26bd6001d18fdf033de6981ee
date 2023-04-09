@@ -1,0 +1,19 @@
+package br.ucsal.model;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tb_reservation")
+public class Reservation {
+
+	private Long reservationId;
+	private Laboratory laboratory;
+	private Teacher teacher;
+	private Discipline discipline;
+	private Date startTime;
+	private Date endTime;
+	private StatusReservation statusReservation;
+}

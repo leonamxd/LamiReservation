@@ -1,0 +1,10 @@
+package br.ucsal.model;
+
+public class Laboratory {
+
+	private Long laboratoryId;
+	private String descriptionLaboratory;
+	private StatusLaboratory statusLaboratory;
+	private Integer machines;
+	private String location;
+}

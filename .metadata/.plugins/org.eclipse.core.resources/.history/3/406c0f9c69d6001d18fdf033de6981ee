@@ -1,0 +1,8 @@
+package br.ucsal.model;
+
+public class Discipline {
+
+	private Long disciplineId;
+	private String nameDiscipline;
+	private String description;
+}

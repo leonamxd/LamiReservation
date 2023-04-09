@@ -1,0 +1,16 @@
+package br.ucsal.model;
+
+import org.hibernate.annotations.Table;
+
+import jakarta.persistence.Entity;
+
+@Entity
+@Table(name = "tb_user")
+public class User {
+
+	private Long userId;
+	private String login;
+	private String password;
+	private Profile profile;
+	private Boolean teacher;
+}
