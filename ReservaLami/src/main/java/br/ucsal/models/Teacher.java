@@ -4,6 +4,7 @@ package br.ucsal.models;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 import java.util.List;
 
@@ -24,11 +25,10 @@ public class Teacher {
 	
 	private String emailTeacher;
 	
-	@ManyToOne
+	@OneToMany
 	@JoinColumn(name = "discipline_id")
 	private List<Discipline> disciplines;
-	
-	
+		
 	public Long getTeacherId() {
 		return teacherId;
 	}
