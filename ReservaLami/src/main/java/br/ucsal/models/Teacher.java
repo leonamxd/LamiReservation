@@ -2,6 +2,11 @@ package br.ucsal.models;
 
 
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,8 +19,14 @@ public class Teacher {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long teacherId;
+	
 	private String nameTeacher;
+	
 	private String emailTeacher;
+	
+	@ManyToOne
+	@JoinColumn(name = "discipline_id")
+	private List<Discipline> disciplines;
 	
 	
 	public Long getTeacherId() {
