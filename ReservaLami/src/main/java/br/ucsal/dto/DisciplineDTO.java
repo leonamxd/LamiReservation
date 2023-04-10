@@ -6,31 +6,31 @@ import br.ucsal.models.Discipline;
 import br.ucsal.repositories.DisciplineRepository;
 
 public class DisciplineDTO {
-	
+
 	@Autowired
 	private DisciplineRepository repository;
-	
-	private String nameDiscipline;
-	private String descriptionDiscipline;
-	
 
-	public String getNameDiscipline() {
-		return nameDiscipline;
+	private String name;
+
+	private String description;
+
+	public String getName() {
+		return name;
 	}
 
-	public void setNameDiscipline(String nameDiscipline) {
-		this.nameDiscipline = nameDiscipline;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getDescriptionDiscipline() {
-		return descriptionDiscipline;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescriptionDiscipline(String descriptionDiscipline) {
-		this.descriptionDiscipline = descriptionDiscipline;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public Object save(Discipline disciplina) {
+	public Discipline save(Discipline disciplina) {
 		return repository.save(disciplina);
 	}
 

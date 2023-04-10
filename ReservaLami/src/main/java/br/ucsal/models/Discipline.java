@@ -1,39 +1,44 @@
 package br.ucsal.models;
 
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_discipline")
 public class Discipline {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long disciplineId;
-	private String nameDiscipline;
-	private String descriptionDiscipline;
-	
-	public Long getDisciplineId() {
-		return disciplineId;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	private String name;
+
+	private String description;
+
+	public Long getId() {
+		return id;
 	}
-	public void setDisciplineId(Long disciplineId) {
-		this.disciplineId = disciplineId;
+
+	public void setId(Long id) {
+		this.id = id;
 	}
-	public String getNameDiscipline() {
-		return nameDiscipline;
+
+	public String getName() {
+		return name;
 	}
-	public void setNameDiscipline(String nameDiscipline) {
-		this.nameDiscipline = nameDiscipline;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getDescriptionDiscipline() {
-		return descriptionDiscipline;
+
+	public String getDescription() {
+		return description;
 	}
-	public void setDescriptionDiscipline(String descriptionDiscipline) {
-		this.descriptionDiscipline = descriptionDiscipline;
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }
