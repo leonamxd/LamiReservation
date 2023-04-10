@@ -3,24 +3,42 @@ package br.ucsal.dto;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import br.ucsal.models.Laboratory;
+import br.ucsal.models.StatusLaboratory;
 import br.ucsal.repositories.LaboratoryRepository;
+import io.micrometer.common.lang.NonNull;
+import jakarta.annotation.Nonnull;
 
 public class LaboratoryDTO {
 
 	@Autowired
 	private LaboratoryRepository repository;
-	
-	private String descriptionLaboratory;
+
+	@Nonnull
+	private String description;
+
+	@NonNull
 	private Integer machines;
+
+	@NonNull
 	private String location;
-	
-	
-	public String getDescriptionLaboratory() {
-		return descriptionLaboratory;
+
+	@Nonnull
+	private StatusLaboratory status;
+
+	public LaboratoryRepository getRepository() {
+		return repository;
 	}
 
-	public void setDescriptionLaboratory(String descriptionLaboratory) {
-		this.descriptionLaboratory = descriptionLaboratory;
+	public void setRepository(LaboratoryRepository repository) {
+		this.repository = repository;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public Integer getMachines() {
@@ -39,7 +57,15 @@ public class LaboratoryDTO {
 		this.location = location;
 	}
 
-	public Object save(Laboratory laboratorio) {
+	public StatusLaboratory getStatus() {
+		return status;
+	}
+
+	public void setStatus(StatusLaboratory status) {
+		this.status = status;
+	}
+
+	public Laboratory save(Laboratory laboratorio) {
 		return repository.save(laboratorio);
 	}
 

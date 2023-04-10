@@ -1,7 +1,5 @@
 package br.ucsal.models;
 
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,57 +11,55 @@ import jakarta.persistence.Id;
 public class Laboratory {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long laboratoryId;
-	private String descriptionLaboratory;
-	private StatusLaboratory statusLaboratory;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	private String description;
+
+	private StatusLaboratory status;
+
 	private Integer machines;
+
 	private String location;
-	
-	public Long getLaboratoryId() {
-		return laboratoryId;
+
+	public Long getId() {
+		return id;
 	}
-	public void setLaboratoryId(Long laboratoryId) {
-		this.laboratoryId = laboratoryId;
+
+	public void setId(Long id) {
+		this.id = id;
 	}
-	public String getDescriptionLaboratory() {
-		return descriptionLaboratory;
+
+	public String getDescription() {
+		return description;
 	}
-	public void setDescriptionLaboratory(String descriptionLaboratory) {
-		this.descriptionLaboratory = descriptionLaboratory;
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
-	public StatusLaboratory getStatusLaboratory() {
-		return statusLaboratory;
+
+	public StatusLaboratory getStatus() {
+		return status;
 	}
-	public void setStatusLaboratory(StatusLaboratory statusLaboratory) {
-		this.statusLaboratory = statusLaboratory;
+
+	public void setStatus(StatusLaboratory status) {
+		this.status = status;
 	}
+
 	public Integer getMachines() {
 		return machines;
 	}
+
 	public void setMachines(Integer machines) {
 		this.machines = machines;
 	}
+
 	public String getLocation() {
 		return location;
 	}
+
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	
-	public void searchAvailability() {
-		
-	}
-	
-	public void getClassroomInfo() {
-		
-	}
-	
-	public void approveReservation() {
-		
-	}
-	
-	public void calcelReservation() {
-		
-	}
+
 }
