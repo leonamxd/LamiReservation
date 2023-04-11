@@ -14,6 +14,8 @@ public class LaboratoryDTO {
 	private LaboratoryRepository repository;
 
 	@Nonnull
+	private String name;
+
 	private String description;
 
 	@NonNull
@@ -31,6 +33,14 @@ public class LaboratoryDTO {
 
 	public void setRepository(LaboratoryRepository repository) {
 		this.repository = repository;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getDescription() {

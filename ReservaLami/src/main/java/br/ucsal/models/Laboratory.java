@@ -14,6 +14,8 @@ public class Laboratory {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	private String name;
+	
 	private String description;
 
 	private StatusLaboratory status;
@@ -60,6 +62,14 @@ public class Laboratory {
 
 	public void setLocation(String location) {
 		this.location = location;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }
