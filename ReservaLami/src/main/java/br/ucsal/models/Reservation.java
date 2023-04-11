@@ -74,7 +74,9 @@ public class Reservation {
 		this.statusReservation = statusReservation;
 	}
 	
-	public void reserveLab() {
-		
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Configurar método equals usado no serviço insertReservation
+		return super.equals(obj);
 	}
 }

@@ -42,7 +42,7 @@ public class ReservationDTO {
 		this.discipline = discipline;
 	}
 
-	public Object save(Reservation reserva) {
+	public Reservation save(Reservation reserva) {
 		return repository.save(reserva);
 	}
 

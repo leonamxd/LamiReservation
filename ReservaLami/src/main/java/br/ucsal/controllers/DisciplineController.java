@@ -23,11 +23,16 @@ import br.ucsal.services.DisciplineService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/disciplina")
+@RequestMapping("/discipline")
 public class DisciplineController {
 
 	@Autowired
 	private DisciplineService disciplineService;
+	
+	@RequestMapping("/newDiscipline")
+	public String form() {
+		return "discipline";
+	}
 	
 	@GetMapping
 	public ResponseEntity<List<Discipline>> findAll() {
@@ -36,16 +41,16 @@ public class DisciplineController {
 	
 	@PostMapping
 	public ResponseEntity<Discipline> insert(@RequestBody @Valid DisciplineDTO _discipline){
-		Discipline disciplina = new Discipline();
-		BeanUtils.copyProperties(_discipline, disciplina);
-		return ResponseEntity.status(HttpStatus.CREATED).body(_discipline.save(disciplina));
+		Discipline discipline = new Discipline();
+		BeanUtils.copyProperties(_discipline, discipline);
+		return ResponseEntity.status(HttpStatus.CREATED).body(_discipline.save(discipline));
 	}
 	
 	@PutMapping("/{id}")
 	public ResponseEntity<Discipline> update(@RequestBody @Valid DisciplineDTO _discipline, @PathVariable Long id) {
-		Discipline disciplina = new Discipline();
-		BeanUtils.copyProperties(_discipline, disciplina);
-		return ResponseEntity.status(HttpStatus.OK).body(_discipline.save(disciplina));
+		Discipline discipline = new Discipline();
+		BeanUtils.copyProperties(_discipline, discipline);
+		return ResponseEntity.status(HttpStatus.OK).body(_discipline.save(discipline));
 	}
 	
 	@DeleteMapping("/{id}")

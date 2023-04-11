@@ -3,6 +3,7 @@ package br.ucsal.dto;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import br.ucsal.models.Discipline;
+import br.ucsal.models.Laboratory;
 import br.ucsal.repositories.DisciplineRepository;
 
 public class DisciplineDTO {
@@ -13,6 +14,8 @@ public class DisciplineDTO {
 	private String name;
 
 	private String description;
+	
+	private Laboratory prioritaryLab;
 
 	public String getName() {
 		return name;
@@ -28,6 +31,14 @@ public class DisciplineDTO {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Laboratory getPrioritaryLab() {
+		return prioritaryLab;
+	}
+
+	public void setPrioritaryLab(Laboratory prioritaryLab) {
+		this.prioritaryLab = prioritaryLab;
 	}
 
 	public Discipline save(Discipline disciplina) {

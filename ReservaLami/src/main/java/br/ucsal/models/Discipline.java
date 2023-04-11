@@ -17,6 +17,8 @@ public class Discipline {
 	private String name;
 
 	private String description;
+	
+	private Laboratory prioritaryLab;
 
 	public Long getId() {
 		return id;
@@ -40,5 +42,13 @@ public class Discipline {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Laboratory getPrioritaryLab() {
+		return prioritaryLab;
+	}
+
+	public void setPrioritaryLab(Laboratory prioritaryLab) {
+		this.prioritaryLab = prioritaryLab;
 	}
 }

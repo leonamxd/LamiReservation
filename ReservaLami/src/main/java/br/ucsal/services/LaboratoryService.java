@@ -27,7 +27,7 @@ public class LaboratoryService {
 
 	public Boolean searchAvailability(Long id) {		
 		Optional<Laboratory> laboratory = laboratoryRepository.findById(id);		
-		return laboratory.get().getStatus().equals(StatusLaboratory.FREE);
+		return laboratory.get().getStatus().equals(StatusLaboratory.AVAILABLE);
 	}
 
 }
