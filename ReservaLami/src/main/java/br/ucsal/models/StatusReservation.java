@@ -4,5 +4,6 @@ public enum StatusReservation {
 
 	APPROVED,
 	COMPLETED,
-	CANCELED;
+	CANCELED_SYSTEM,
+	CANCELED_USER;
 }

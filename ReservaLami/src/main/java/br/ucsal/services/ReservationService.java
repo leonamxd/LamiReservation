@@ -52,7 +52,7 @@ public class ReservationService {
 
 			// cancela reservas conflitantes não prioritárias
 			reservasConflitantes.stream()
-					.forEach(reservation -> reservation.setStatusReservation(StatusReservation.CANCELED));
+					.forEach(reservation -> reservation.setStatusReservation(StatusReservation.CANCELED_SYSTEM));
 			reservationRepository.saveAll(reservasConflitantes);
 			
 			//TODO implementar notificação das reservas canceladas
@@ -64,7 +64,7 @@ public class ReservationService {
 
 	public Reservation cancelReservation(Long id) {
 		Optional<Reservation> reservation = reservationRepository.findById(id);
-		reservation.get().setStatusReservation(StatusReservation.CANCELED);
+		reservation.get().setStatusReservation(StatusReservation.CANCELED_USER);
 		return reservationRepository.save(reservation.get());
 	}
 }
