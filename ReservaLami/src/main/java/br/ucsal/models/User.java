@@ -18,7 +18,7 @@ public class User {
 	private String login;
 	private String password;
 	private Profile profile;
-	private Boolean teacher;
+	private Teacher teacher;
 	
 	
 	public Long getUserId() {
@@ -45,10 +45,10 @@ public class User {
 	public void setProfile(Profile profile) {
 		this.profile = profile;
 	}
-	public Boolean getTeacher() {
+	public Teacher getTeacher() {
 		return teacher;
 	}
-	public void setTeacher(Boolean teacher) {
+	public void setTeacher(Teacher teacher) {
 		this.teacher = teacher;
 	}
 	

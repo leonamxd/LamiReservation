@@ -7,5 +7,7 @@ import br.ucsal.models.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
+	
+	public User findByUserLogin(String _userLogin);
 
 }
