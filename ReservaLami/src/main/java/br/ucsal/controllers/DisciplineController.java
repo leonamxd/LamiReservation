@@ -23,7 +23,7 @@ import br.ucsal.services.DisciplineService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/discipline")
+@RequestMapping("/api/discipline")
 public class DisciplineController {
 
 	@Autowired
